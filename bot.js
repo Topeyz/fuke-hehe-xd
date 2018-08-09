@@ -10,6 +10,7 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 });
+
 var prefix = "+";
 const sql = require("sqlite");
 client.on("message", message => {
@@ -40,7 +41,7 @@ message.channel.send(image)
     }
 });
 
-  client.on('message' , async (message) => {
+  client.on('message' , (message) => {
 var prefix = "+"
     if(message.content.startsWith(prefix + "tInv")) {
 if(message.author.bot) return;
@@ -55,19 +56,19 @@ if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
         }
       possibleInvites.push(['\n\ ' +'<@'+ i.inviter.id +'>' + '  :  ' +   i.uses]);
       if (i.uses === 10) {//يمديك تعدل رقم وصول العدد حق الانفايت الى اأقل أو أكثر
-          message.member.addRole(message.member.guild.roles.find("name",""))//هنآ أسم ألرتبه اللي تجيهه
+          message.member.addRole(message.member.guild.roles.find("name","『 𝒱ℐ𝒫  』"))//هنآ أسم ألرتبه اللي تجيهه
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
 }
 if (i.uses === 20) {
-message.member.addRole(message.member.guild.roles.find("name",""))
+message.member.addRole(message.member.guild.roles.find("name","『 𝒱ℐ𝒫  』"))
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
 }
 if (i.uses === 30) {
-message.member.addRole(message.member.guild.roles.find("name",""))
+message.member.addRole(message.member.guild.roles.find("name","『 𝒱ℐ𝒫  』"))
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
@@ -80,4 +81,5 @@ console.log('`Error`: ' + RebeL);
     message.channel.send(embed)
     }
 });
+
 client.login(process.env.BOT_TOKEN); 
